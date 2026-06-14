@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f7f1e1;
+  --ink: #2a2418;
+  --muted: #7a6f55;
+  --gold: #b8893d;
+  --card: #ffffff;
+  --border: #e8dec3;
+}
+
+.dark {
+  --bg: #14110a;
+  --ink: #efe6cc;
+  --muted: #9c906f;
+  --gold: #d6a559;
+  --card: #1f1a10;
+  --border: #2d2618;
+}
+
+html, body, #root { height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.5s ease, color 0.3s ease;
+}
+
+.font-arabic { font-family: Amiri, serif; direction: rtl; }
+.font-bangla { font-family: "Noto Serif Bengali", serif; }
+.font-display { font-family: "Cormorant Garamond", serif; }
+
+.ornament::before, .ornament::after {
+  content: "✦"; opacity: 0.4; margin: 0 0.5em;
+}
+
+/* =====================================================
+   AESTHETIC THEME: DESERT OASIS 🌴
+   ===================================================== */
+.theme-desert {
+  --bg: #f5deb3;
+  --ink: #3b2107;
+  --muted: #8b6914;
+  --gold: #c8860a;
+  --card: #fff8e7;
+  --border: #e6c97a;
+}
+
+.theme-desert body {
+  background: linear-gradient(180deg, #f5a623 0%, #f5deb3 40%, #e8c87a 100%);
+  min-height: 100%;
+}
+
+/* Animated desert sky canvas */
+.theme-desert #root::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 120% 40% at 50% -10%, #ff9a3c55 0%, transparent 70%),
+    linear-gradient(180deg, #ff7e2200 0%, #f5a62320 30%, #f5deb300 60%);
+  animation: desertGlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes desertGlow {
+  from { opacity: 0.6; }
+  to   { opacity: 1; }
+}
+
+/* Floating palm silhouette */
+.theme-desert #root::after {
+  content: "🌴";
+  position: fixed;
+  bottom: 10vh;
+  left: 5vw;
+  font-size: 5rem;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+  animation: palmSway 6s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+@keyframes palmSway {
+  from { transform: rotate(-4deg); }
+  to   { transform: rotate(4deg); }
+}
+
+.theme-desert #root > * { position: relative; z-index: 1; }
+
+/* Dune shimmer on cards */
+.theme-desert .rounded-2xl,
+.theme-desert .rounded-xl {
+  background: linear-gradient(135deg, #fff8e7ee 0%, #ffedb8ee 100%);
+  border-color: #d4a843;
+  box-shadow: 0 4px 20px #c8860a18;
+}
+
+/* =====================================================
+   AESTHETIC THEME: RIVER & GREENFIELD 🌊
+   ===================================================== */
+.theme-river {
+  --bg: #e8f5e9;
+  --ink: #1b3a2d;
+  --muted: #4a7c59;
+  --gold: #2e7d32;
+  --card: #f1faf2;
+  --border: #a5d6a7;
+}
+
+.theme-river body {
+  background: linear-gradient(180deg, #81c784 0%, #e8f5e9 35%, #b3e5fc 100%);
+}
+
+/* Gentle river ripple overlay */
+.theme-river #root::before {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35vh;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 0%, #29b6f630 60%, #0288d145 100%);
+  animation: riverFlow 10s ease-in-out infinite alternate;
+}
+
+@keyframes riverFlow {
+  from { transform: translateX(-2%) scaleY(1); opacity: 0.6; }
+  to   { transform: translateX(2%) scaleY(1.03); opacity: 1; }
+}
+
+/* Floating leaves */
+.theme-river #root::after {
+  content: "🍃";
+  position: fixed;
+  top: 15vh;
+  right: 8vw;
+  font-size: 3rem;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+  animation: leafFloat 7s ease-in-out infinite alternate;
+}
+
+@keyframes leafFloat {
+  from { transform: translateY(0) rotate(-10deg); }
+  to   { transform: translateY(-18px) rotate(10deg); }
+}
+
+.theme-river #root > * { position: relative; z-index: 1; }
+
+.theme-river .rounded-2xl,
+.theme-river .rounded-xl {
+  background: linear-gradient(135deg, #f1faf2f0 0%, #e8f5e9f0 100%);
+  border-color: #81c784;
+  box-shadow: 0 4px 20px #2e7d3215;
+}
+
+/* =====================================================
+   AESTHETIC THEME: MOONLIT STARRY NIGHT ✨
+   ===================================================== */
+.theme-moonlit {
+  --bg: #0d0d2b;
+  --ink: #e8eaf6;
+  --muted: #9fa8da;
+  --gold: #ffd700;
+  --card: #12123a;
+  --border: #2a2a6a;
+}
+
+.theme-moonlit body {
+  background: radial-gradient(ellipse at 70% 10%, #1a1a4e 0%, #0d0d2b 60%);
+}
+
+/* Star field */
+.theme-moonlit #root::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1px 1px at 10% 15%, #fff 100%, transparent),
+    radial-gradient(1px 1px at 25% 8%, #fff 100%, transparent),
+    radial-gradient(1.5px 1.5px at 40% 22%, #ffd700 100%, transparent),
+    radial-gradient(1px 1px at 55% 5%, #fff 100%, transparent),
+    radial-gradient(1px 1px at 70% 18%, #fff 100%, transparent),
+    radial-gradient(1.5px 1.5px at 85% 10%, #fff8 100%, transparent),
+    radial-gradient(1px 1px at 15% 35%, #fff6 100%, transparent),
+    radial-gradient(1px 1px at 30% 42%, #fff 100%, transparent),
+    radial-gradient(1px 1px at 60% 30%, #ffd70088 100%, transparent),
+    radial-gradient(1px 1px at 78% 38%, #fff 100%, transparent),
+    radial-gradient(1px 1px at 90% 28%, #fff 100%, transparent),
+    radial-gradient(1.5px 1.5px at 5% 55%, #fff 100%, transparent),
+    radial-gradient(1px 1px at 45% 48%, #fff 100%, transparent),
+    radial-gradient(1px 1px at 65% 52%, #ffd70066 100%, transparent),
+    radial-gradient(1px 1px at 20% 60%, #fff8 100%, transparent),
+    radial-gradient(1px 1px at 95% 45%, #fff 100%, transparent);
+  animation: starTwinkle 4s ease-in-out infinite alternate;
+}
+
+@keyframes starTwinkle {
+  0%   { opacity: 0.7; }
+  50%  { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Moon glow */
+.theme-moonlit #root::after {
+  content: "🌕";
+  position: fixed;
+  top: 6vh;
+  right: 8vw;
+  font-size: 4rem;
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 0;
+  filter: drop-shadow(0 0 24px #ffd70066);
+  animation: moonGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes moonGlow {
+  from { filter: drop-shadow(0 0 18px #ffd70044); opacity: 0.75; }
+  to   { filter: drop-shadow(0 0 36px #ffd700aa); opacity: 0.95; }
+}
+
+.theme-moonlit #root > * { position: relative; z-index: 1; }
+
+.theme-moonlit .rounded-2xl,
+.theme-moonlit .rounded-xl {
+  background: linear-gradient(135deg, #12123af0 0%, #1a1a5af0 100%);
+  border-color: #3a3a9a;
+  box-shadow: 0 4px 28px #ffd70012, 0 0 0 1px #2a2a6a;
+}
+
+.theme-moonlit .bg-gold { background: #ffd700 !important; color: #0d0d2b !important; }

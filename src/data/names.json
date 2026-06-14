@@ -1,0 +1,22 @@
+[
+  { "n": 1, "arabic": "ٱلرَّحْمَٰنُ", "translit": "Ar-Rahman", "en": "The Most Merciful" },
+  { "n": 2, "arabic": "ٱلرَّحِيمُ", "translit": "Ar-Raheem", "en": "The Most Compassionate" },
+  { "n": 3, "arabic": "ٱلْمَلِكُ", "translit": "Al-Malik", "en": "The King" },
+  { "n": 4, "arabic": "ٱلْقُدُّوسُ", "translit": "Al-Quddus", "en": "The Most Holy" },
+  { "n": 5, "arabic": "ٱلسَّلَامُ", "translit": "As-Salam", "en": "The Source of Peace" },
+  { "n": 6, "arabic": "ٱلْمُؤْمِنُ", "translit": "Al-Mu'min", "en": "The Guardian of Faith" },
+  { "n": 7, "arabic": "ٱلْمُهَيْمِنُ", "translit": "Al-Muhaymin", "en": "The Protector" },
+  { "n": 8, "arabic": "ٱلْعَزِيزُ", "translit": "Al-Aziz", "en": "The Mighty" },
+  { "n": 9, "arabic": "ٱلْجَبَّارُ", "translit": "Al-Jabbar", "en": "The Compeller" },
+  { "n": 10, "arabic": "ٱلْمُتَكَبِّرُ", "translit": "Al-Mutakabbir", "en": "The Supreme" },
+  { "n": 11, "arabic": "ٱلْخَالِقُ", "translit": "Al-Khaliq", "en": "The Creator" },
+  { "n": 12, "arabic": "ٱلْبَارِئُ", "translit": "Al-Bari'", "en": "The Maker" },
+  { "n": 13, "arabic": "ٱلْمُصَوِّرُ", "translit": "Al-Musawwir", "en": "The Fashioner" },
+  { "n": 14, "arabic": "ٱلْغَفَّارُ", "translit": "Al-Ghaffar", "en": "The Constant Forgiver" },
+  { "n": 15, "arabic": "ٱلْقَهَّارُ", "translit": "Al-Qahhar", "en": "The Subduer" },
+  { "n": 16, "arabic": "ٱلْوَهَّابُ", "translit": "Al-Wahhab", "en": "The Bestower" },
+  { "n": 17, "arabic": "ٱلرَّزَّاقُ", "translit": "Ar-Razzaq", "en": "The Provider" },
+  { "n": 18, "arabic": "ٱلْفَتَّاحُ", "translit": "Al-Fattah", "en": "The Opener" },
+  { "n": 19, "arabic": "ٱلْعَلِيمُ", "translit": "Al-'Alim", "en": "The All-Knowing" },
+  { "n": 20, "arabic": "ٱلْحَكِيمُ", "translit": "Al-Hakim", "en": "The All-Wise" }
+]
